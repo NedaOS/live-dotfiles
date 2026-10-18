@@ -118,3 +118,10 @@ alias wget 'wget -c '
 
 # Get the error messages from journalctl
 alias jctl 'journalctl -p 3 -xb'
+
+# kilo
+fish_add_path /home/nedamani/.kilo/bin
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/nedamani/.local/bin" $PATH
