@@ -125,3 +125,6 @@ fish_add_path /home/nedamani/.kilo/bin
 
 # Added by Antigravity CLI installer
 set -gx PATH "/home/nedamani/.local/bin" $PATH
+
+# clear
+alias clear='printf "\e[H\e[3J"'
