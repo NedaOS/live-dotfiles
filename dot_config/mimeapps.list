@@ -52,3 +52,4 @@ video/quicktime=vlc.desktop
 video/x-msvideo=vlc.desktop
 video/x-ms-wmv=vlc.desktop
 video/ogg=vlc.desktop
+x-scheme-handler/codex=chatgpt.desktop
