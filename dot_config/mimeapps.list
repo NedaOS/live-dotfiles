@@ -1,5 +1,5 @@
 [Default Applications]
-text/html=com.microsoft.VSCode.desktop
+text/html=brave-browser.desktop
 x-scheme-handler/http=brave-browser.desktop
 x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/about=brave-browser.desktop
@@ -53,3 +53,7 @@ video/x-msvideo=vlc.desktop
 video/x-ms-wmv=vlc.desktop
 video/ogg=vlc.desktop
 x-scheme-handler/codex=chatgpt.desktop
+application/pdf=okularApplication_pdf.desktop
+
+[Added Associations]
+application/pdf=okularApplication_pdf.desktop;
