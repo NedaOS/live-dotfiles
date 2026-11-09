@@ -122,6 +122,8 @@ alias jctl 'journalctl -p 3 -xb'
 # kilo
 fish_add_path /home/nedamani/.kilo/bin
 
-
 # Added by Antigravity CLI installer
 set -gx PATH "/home/nedamani/.local/bin" $PATH
+
+# dev tools
+alias brave-mcp 'brave-browser --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-codex-debug'
