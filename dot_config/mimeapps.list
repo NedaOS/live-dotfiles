@@ -5,8 +5,8 @@ x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/about=brave-browser.desktop
 x-scheme-handler/unknown=brave-browser.desktop
 inode/directory=org.gnome.Nautilus.desktop
-x-scheme-handler/tg=com.ayugram.desktop.desktop
-x-scheme-handler/tonsite=com.ayugram.desktop.desktop
+x-scheme-handler/tg=userapp-AyuGram Desktop-BFVZY3.desktop
+x-scheme-handler/tonsite=userapp-AyuGram Desktop-3WI0Y3.desktop
 x-scheme-handler/obsidian=md.obsidian.Obsidian.desktop
 application/x-gnome-saved-search=org.gnome.Nautilus.desktop
 text/css=com.microsoft.VSCode.desktop
@@ -57,3 +57,5 @@ application/pdf=okularApplication_pdf.desktop
 
 [Added Associations]
 application/pdf=okularApplication_pdf.desktop;
+x-scheme-handler/tg=userapp-AyuGram Desktop-BFVZY3.desktop;
+x-scheme-handler/tonsite=userapp-AyuGram Desktop-3WI0Y3.desktop;
