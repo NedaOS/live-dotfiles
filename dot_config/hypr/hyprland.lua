@@ -21,3 +21,4 @@ local lib = require("config.lib")
 if lib.exists(lib.root .. "/custom.lua") then
     require("custom")
 end
+
