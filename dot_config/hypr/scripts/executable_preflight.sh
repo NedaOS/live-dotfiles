@@ -12,10 +12,14 @@ if command -v hyprland >/dev/null 2>&1; then
 else bad "hyprland not found"; fi
 
 echo "Display manager / session"
-if [ "$(systemctl is-enabled sddm 2>/dev/null)" = enabled ]; then ok "sddm enabled"; else bad "sddm not enabled"; fi
-for f in /usr/share/wayland-sessions/hyprland.desktop /usr/share/wayland-sessions/hyprland-uwsm.desktop; do
-    [ -f "$f" ] && ok "session entry: $f" || warn "missing session entry: $f"
+if [ "$(systemctl is-enabled greetd.service 2>/dev/null)" = enabled ]; then ok "greetd enabled"; else bad "greetd not enabled"; fi
+[ "$(basename "$(readlink -f /etc/systemd/system/display-manager.service)")" = greetd.service ] && ok "greetd alias" || bad "incorrect display-manager alias"
+[ "$(systemctl get-default)" = graphical.target ] && ok "graphical target" || bad "graphical target not selected"
+for f in /usr/bin/noctalia-greeter-session /usr/local/bin/hyprland-quiet-session; do
+    [ -x "$f" ] && ok "$f" || bad "missing launcher: $f"
 done
+noctalia-greeter sessions 2>/dev/null | grep -Fx 'Hyprland (Quiet)' >/dev/null && ok "quiet session" || bad "quiet session missing"
+if rpm -q sddm >/dev/null 2>&1 || rpm -q sddm-wayland-generic >/dev/null 2>&1; then bad "obsolete SDDM packages installed"; fi
 
 echo "Programs used by the config"
 for c in noctalia kitty yazi xdg-settings xdg-open pactl; do

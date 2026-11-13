@@ -1,0 +1,17 @@
+# Generated outputs and mutable state belong to the application, never capture them.
+.config/kitty/themes/noctalia.conf
+.config/kitty/current-theme.conf
+.config/fish/noctalia-prompt-colors.fish
+.config/fish/fish_variables
+.config/hypr/config/colors.lua
+.config/noctalia/greeter-sync.toml
+.local/state/**
+.cache/**
+# Documentation is source-only.
+README.md
+tests/**
+.ssh/**
+.gnupg/**
+.config/chezmoi/**
+.local/share/keyrings/**
+.gitignore

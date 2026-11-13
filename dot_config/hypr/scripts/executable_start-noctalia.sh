@@ -1,7 +1,7 @@
 #!/bin/sh
 # Start Noctalia exactly once.
-# - Inside a uwsm-managed session (SDDM "Hyprland (uwsm-managed)") it runs as a uwsm app.
-# - Otherwise it is started directly (plain "Hyprland" session entry).
+# - Inside a uwsm-managed session it runs as a uwsm app.
+# - Otherwise it is started directly ("Hyprland (Quiet)" session).
 # Log: ~/.cache/noctalia/noctalia.log (written by Noctalia itself).
 
 command -v noctalia >/dev/null 2>&1 || { echo "noctalia not installed" >&2; exit 1; }

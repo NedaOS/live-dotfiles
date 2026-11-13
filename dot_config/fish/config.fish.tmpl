@@ -5,12 +5,12 @@ set VIRTUAL_ENV_DISABLE_PROMPT 1
 set -x SHELL /usr/bin/fish
 
 # Use bat for man pages
-set -xU MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -xU MANROFFOPT -c
+set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -gx MANROFFOPT -c
 
 # Set settings for https://github.com/franciscolourenco/done
-set -U __done_min_cmd_duration 10000
-set -U __done_notification_urgency_level low
+set -g __done_min_cmd_duration 10000
+set -g __done_notification_urgency_level low
 
 ## Environment setup
 # Apply .profile: use this to put fish compatible .profile stuff in
@@ -120,10 +120,10 @@ alias wget 'wget -c '
 alias jctl 'journalctl -p 3 -xb'
 
 # kilo
-fish_add_path /home/nedamani/.kilo/bin
+fish_add_path "{{ .chezmoi.homeDir }}/.kilo/bin"
 
 # Added by Antigravity CLI installer
-set -gx PATH "/home/nedamani/.local/bin" $PATH
+set -gx PATH "{{ .chezmoi.homeDir }}/.local/bin" $PATH
 
 # dev tools
 alias brave-mcp 'brave-browser --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-codex-debug'

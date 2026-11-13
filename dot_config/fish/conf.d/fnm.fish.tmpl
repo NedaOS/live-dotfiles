@@ -1,0 +1,6 @@
+# Ansible installs fnm; Chezmoi owns Fish integration.
+set -l fnm_path "{{ .chezmoi.homeDir }}/.local/share/fnm"
+if test -x "$fnm_path/fnm"
+    fish_add_path --path "$fnm_path"
+    fnm env --shell fish | source
+end

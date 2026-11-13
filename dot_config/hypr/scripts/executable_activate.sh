@@ -1,6 +1,6 @@
 #!/bin/sh
 # Install this configuration into ~/.config/hypr (after a full backup).
-# Does NOT restart Hyprland, SDDM or the computer. Running Hyprland reloads the
+# Does NOT restart Hyprland, greetd or the computer. Running Hyprland reloads the
 # config by itself when files change; Noctalia starts on the next login
 # (or run scripts/start-noctalia.sh to start it now).
 set -eu

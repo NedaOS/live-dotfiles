@@ -1,5 +1,9 @@
 -- Look and feel: ML4W "default" window/decoration/layout/misc variants.
-local c = require("config.colors")
+-- Noctalia generates colors.lua; fresh installs work before the first palette.
+local has_colors, c = pcall(require, "config.colors")
+if not has_colors then
+    c = { primary = "rgba(81d5ceff)", on_primary = "rgba(003734ff)" }
+end
 
 hl.config({
     general = {
